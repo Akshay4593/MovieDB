@@ -25,6 +25,7 @@
 		780F3C27233FF89400C4F5FE /* PopularMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C26233FF89400C4F5FE /* PopularMoviesPresenter.swift */; };
 		780F3C29233FF98000C4F5FE /* PopularMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C28233FF97F00C4F5FE /* PopularMoviesInteractor.swift */; };
 		780F3C2B233FF99700C4F5FE /* PopularMoviesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C2A233FF99700C4F5FE /* PopularMoviesWireframe.swift */; };
+		780F3C2D233FFA6200C4F5FE /* AppNavigationCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C2C233FFA6200C4F5FE /* AppNavigationCordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		780F3C26233FF89400C4F5FE /* PopularMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesPresenter.swift; sourceTree = "<group>"; };
 		780F3C28233FF97F00C4F5FE /* PopularMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesInteractor.swift; sourceTree = "<group>"; };
 		780F3C2A233FF99700C4F5FE /* PopularMoviesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesWireframe.swift; sourceTree = "<group>"; };
+		780F3C2C233FFA6200C4F5FE /* AppNavigationCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationCordinator.swift; sourceTree = "<group>"; };
 		DB3C9EEAFED8EC302425A66B /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				780F3BFD233E2C8500C4F5FE /* AppDelegate.swift */,
 				780F3BFF233E2C8500C4F5FE /* ViewController.swift */,
+				780F3C2C233FFA6200C4F5FE /* AppNavigationCordinator.swift */,
 				780F3C01233E2C8500C4F5FE /* Main.storyboard */,
 				780F3C04233E2C8800C4F5FE /* Assets.xcassets */,
 				780F3C06233E2C8800C4F5FE /* LaunchScreen.storyboard */,
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780F3C2D233FFA6200C4F5FE /* AppNavigationCordinator.swift in Sources */,
 				780F3C25233FF83100C4F5FE /* PopularMoviesProtocols.swift in Sources */,
 				780F3C00233E2C8500C4F5FE /* ViewController.swift in Sources */,
 				780F3BFE233E2C8500C4F5FE /* AppDelegate.swift in Sources */,
