@@ -18,6 +18,13 @@
 		780F3C18233FED3600C4F5FE /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780F3C13233FED3600C4F5FE /* Montserrat-Bold.ttf */; };
 		780F3C19233FED3600C4F5FE /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780F3C14233FED3600C4F5FE /* Montserrat-SemiBold.ttf */; };
 		780F3C1A233FED3600C4F5FE /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780F3C15233FED3600C4F5FE /* Montserrat-Regular.ttf */; };
+		780F3C1D233FF1C100C4F5FE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C1C233FF1C100C4F5FE /* Constant.swift */; };
+		780F3C21233FF76B00C4F5FE /* Popular.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780F3C20233FF76B00C4F5FE /* Popular.storyboard */; };
+		780F3C23233FF7F200C4F5FE /* PopularMoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C22233FF7F200C4F5FE /* PopularMoviesVC.swift */; };
+		780F3C25233FF83100C4F5FE /* PopularMoviesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C24233FF83100C4F5FE /* PopularMoviesProtocols.swift */; };
+		780F3C27233FF89400C4F5FE /* PopularMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C26233FF89400C4F5FE /* PopularMoviesPresenter.swift */; };
+		780F3C29233FF98000C4F5FE /* PopularMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C28233FF97F00C4F5FE /* PopularMoviesInteractor.swift */; };
+		780F3C2B233FF99700C4F5FE /* PopularMoviesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3C2A233FF99700C4F5FE /* PopularMoviesWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		780F3C13233FED3600C4F5FE /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		780F3C14233FED3600C4F5FE /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		780F3C15233FED3600C4F5FE /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		780F3C1C233FF1C100C4F5FE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		780F3C20233FF76B00C4F5FE /* Popular.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popular.storyboard; sourceTree = "<group>"; };
+		780F3C22233FF7F200C4F5FE /* PopularMoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesVC.swift; sourceTree = "<group>"; };
+		780F3C24233FF83100C4F5FE /* PopularMoviesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesProtocols.swift; sourceTree = "<group>"; };
+		780F3C26233FF89400C4F5FE /* PopularMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesPresenter.swift; sourceTree = "<group>"; };
+		780F3C28233FF97F00C4F5FE /* PopularMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesInteractor.swift; sourceTree = "<group>"; };
+		780F3C2A233FF99700C4F5FE /* PopularMoviesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesWireframe.swift; sourceTree = "<group>"; };
 		DB3C9EEAFED8EC302425A66B /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +99,8 @@
 				780F3C04233E2C8800C4F5FE /* Assets.xcassets */,
 				780F3C06233E2C8800C4F5FE /* LaunchScreen.storyboard */,
 				780F3C09233E2C8800C4F5FE /* Info.plist */,
+				780F3C1E233FF53800C4F5FE /* UI */,
+				780F3C1B233FF19A00C4F5FE /* Config */,
 				780F3C0F233FEB9100C4F5FE /* Resources */,
 			);
 			path = MovieDB;
@@ -108,6 +124,35 @@
 				780F3C15233FED3600C4F5FE /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		780F3C1B233FF19A00C4F5FE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				780F3C1C233FF1C100C4F5FE /* Constant.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		780F3C1E233FF53800C4F5FE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				780F3C1F233FF59900C4F5FE /* Popular */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		780F3C1F233FF59900C4F5FE /* Popular */ = {
+			isa = PBXGroup;
+			children = (
+				780F3C20233FF76B00C4F5FE /* Popular.storyboard */,
+				780F3C22233FF7F200C4F5FE /* PopularMoviesVC.swift */,
+				780F3C24233FF83100C4F5FE /* PopularMoviesProtocols.swift */,
+				780F3C26233FF89400C4F5FE /* PopularMoviesPresenter.swift */,
+				780F3C28233FF97F00C4F5FE /* PopularMoviesInteractor.swift */,
+				780F3C2A233FF99700C4F5FE /* PopularMoviesWireframe.swift */,
+			);
+			path = Popular;
 			sourceTree = "<group>";
 		};
 		B543DEAB6C0083A526252A94 /* Pods */ = {
@@ -185,6 +230,7 @@
 				780F3C18233FED3600C4F5FE /* Montserrat-Bold.ttf in Resources */,
 				780F3C19233FED3600C4F5FE /* Montserrat-SemiBold.ttf in Resources */,
 				780F3C05233E2C8800C4F5FE /* Assets.xcassets in Resources */,
+				780F3C21233FF76B00C4F5FE /* Popular.storyboard in Resources */,
 				780F3C16233FED3600C4F5FE /* Montserrat-Medium.ttf in Resources */,
 				780F3C03233E2C8500C4F5FE /* Main.storyboard in Resources */,
 			);
@@ -239,8 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780F3C25233FF83100C4F5FE /* PopularMoviesProtocols.swift in Sources */,
 				780F3C00233E2C8500C4F5FE /* ViewController.swift in Sources */,
 				780F3BFE233E2C8500C4F5FE /* AppDelegate.swift in Sources */,
+				780F3C29233FF98000C4F5FE /* PopularMoviesInteractor.swift in Sources */,
+				780F3C1D233FF1C100C4F5FE /* Constant.swift in Sources */,
+				780F3C23233FF7F200C4F5FE /* PopularMoviesVC.swift in Sources */,
+				780F3C27233FF89400C4F5FE /* PopularMoviesPresenter.swift in Sources */,
+				780F3C2B233FF99700C4F5FE /* PopularMoviesWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
