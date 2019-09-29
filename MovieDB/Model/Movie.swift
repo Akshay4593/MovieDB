@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Movie: Codable {
     
     var voteCount: Int = 0

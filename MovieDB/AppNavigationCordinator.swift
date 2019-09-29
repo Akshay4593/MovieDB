@@ -52,4 +52,11 @@ class AppNavigationCordinator {
         return vc
     }
     
+    func createMovieDetailsModule(movieDetails: Movie) -> UIViewController {
+        let vc = UIStoryboard(name: "MovieDetails", bundle: nil)
+            .instantiateViewController(withIdentifier: "MovieDetailsVC") as! MovieDetailsVC
+        vc.movieDetails = movieDetails
+        return vc
+    }
+    
 }

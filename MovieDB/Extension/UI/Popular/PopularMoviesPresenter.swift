@@ -38,6 +38,7 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
     }
     
     func retryLoadPopularMovies() {
+        view?.hideErrorView()
         loadPopularMovies()
     }
     
@@ -57,18 +58,16 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
     }
     
     func sortByPopularity() {
-        
+        moviesViewModel.sortedArrayByPopularity()
+        view?.showPopularMovies(viewModel: moviesViewModel)
         
     }
     
     func sortByRatings() {
-        var movieData = moviesViewModel.data
-        movieData.sort { $0.voteAverage > $1.voteAverage }
+        moviesViewModel.sortedArrayByRatings()
         view?.showPopularMovies(viewModel: moviesViewModel)
 
     }
-    
-
     
 }
 
@@ -92,7 +91,7 @@ extension PopularMoviesPresenter: PopularMoviesOutputInteractorProtocol {
     func onPopularMoviesError(error: APIError) {
         view?.hideLoading()
         moviesViewModel.failed()
-        view?.showErrorView(type: .Custom(title: nil, desc: error.description, image: UIImage(), btnAction: "Retry"))
+        view?.showErrorView(type: .Custom(title: nil, desc: error.description, image:Image.icEmptyState.image, btnAction: "Retry"))
     }
     
 }

@@ -14,7 +14,7 @@ class PaginationViewModel<T> {
     private(set) var page: Int = 1
     private(set) var isLoading: Bool = false
     private var hasMore: Bool = true
-    private(set) var data: [T] = []
+    public var data: [T] = []
     private(set) var total: Int = 0
     
     private var maxData: Int = -1

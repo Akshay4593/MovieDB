@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+enum Image: String {
+    case icEmptyState = "ic_empty_state"
+    
+    var image: UIImage? {
+        return UIImage(named: self.rawValue)
+    }
+}
+
 class SNEmptyStateTheme {
     
     private(set) var titleLabelFont: UIFont = UIFont.themeRegularFont(of: 17)

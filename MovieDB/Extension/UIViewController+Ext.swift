@@ -43,3 +43,20 @@ extension UIViewController {
     }
     
 }
+extension String {
+    
+    func formatDateMediumStyle(dateFormat: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        
+        let date = formatter.date(from: self)
+        
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        let dateString = formatter.string(from: date!)
+        
+        return dateString
+    }
+    
+}

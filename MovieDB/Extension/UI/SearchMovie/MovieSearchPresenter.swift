@@ -45,7 +45,7 @@ class MovieSearchPresenter: MovieSearchPresenterProtocol {
             
             //Image.icEmptyState.image
             
-            view?.showErrorView(type: .Custom(title: nil, desc: "No matching results found", image: UIImage(), btnAction: nil))
+            view?.showErrorView(type: .Custom(title: nil, desc: "No matching results found", image: Image.icEmptyState.image , btnAction: nil))
         } else {
             view?.hideErrorView()
         }

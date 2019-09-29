@@ -13,8 +13,8 @@ class PopularMoviesWireFrame: PopularMoviesWireFrameProtocol {
     
     func pushMovieDetailVC(view: PopularMoviesVCProtocol, movie: Movie) {
         if let superVC = view as? UIViewController {
-//            let vc = AppNavigationCordinator.shared.createMovieDetailModule(movie: movie)
-//            superVC.navigationController?.pushViewController(vc, animated: true)
+            let vc = AppNavigationCordinator.shared.createMovieDetailsModule(movieDetails: movie)
+            superVC.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
