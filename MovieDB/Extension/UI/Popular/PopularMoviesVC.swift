@@ -55,7 +55,7 @@ class PopularMoviesVC: BaseUIViewController {
         
         
         // Set SearchController
-        /*
+    
         let searchVC = AppNavigationCordinator.shared.createSearchMoviesModule(delegate: self)
         let searchController = UISearchController(searchResultsController: searchVC)
         if #available(iOS 11, *) {
@@ -77,7 +77,7 @@ class PopularMoviesVC: BaseUIViewController {
         } else {
             navigationItem.titleView = searchController.view
         }
-        definesPresentationContext = true*/
+        definesPresentationContext = true
     }
     
     
@@ -86,10 +86,10 @@ class PopularMoviesVC: BaseUIViewController {
 extension PopularMoviesVC: UISearchControllerDelegate {
     
     func willPresentSearchController(_ searchController: UISearchController) {
-//        guard let vc = searchController.searchResultsController as? MovieSearchResultVC, let _model = movieViewModel, let presenter = vc.presenter else {
-//            return
-//        }
-//        presenter.setFilterMovies(movies: _model.data)
+        guard let vc = searchController.searchResultsController as? MovieSearchResultVC, let _model = movieViewModel, let presenter = vc.presenter else {
+            return
+        }
+        presenter.setFilterMovies(movies: _model.data)
     }
     
 }
@@ -127,7 +127,7 @@ extension PopularMoviesVC: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if showCVLoadingFooter {
             let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "MovieLoadingFooter", for: indexPath) as! MovieLoadingFooterView
-            return UICollectionReusableView()
+            return cell
         }
         return UICollectionReusableView()
     }
@@ -193,6 +193,14 @@ extension PopularMoviesVC: SNEmptyStateViewDelegate {
     
     func retryBtnTapped() {
         presenter?.retryLoadPopularMovies()
+    }
+    
+}
+
+extension PopularMoviesVC: MovieSearchResultVCDelegate {
+    
+    func movieSeachVC(tappedMovie index: IndexPath) {
+        presenter?.didSeletMovie(at: index)
     }
     
 }
