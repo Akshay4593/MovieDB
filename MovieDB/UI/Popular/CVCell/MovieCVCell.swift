@@ -31,6 +31,8 @@ class MovieCVCell: UICollectionViewCell {
         
         layerView.backgroundColor = UIColor.purple.withAlphaComponent(0.12)
         
+        layerView.bringSubviewToFront(imgView)
+        
     }
     
     override func prepareForReuse() {
@@ -40,8 +42,8 @@ class MovieCVCell: UICollectionViewCell {
     
     public func configure(movie: Movie) {
         titleLbl.text = movie.title
-        imgView.kf.setImage(with: URL(fileURLWithPath: movie.fullPosterPath))
-       
+        imgView.kf.setImage(with: URL(fileURLWithPath:movie.fullPosterPath))
+        
     }
     
 }

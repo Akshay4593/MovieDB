@@ -25,7 +25,6 @@ class Movie: Codable {
     var adult: Bool = false
     var overview: String = ""
     var releaseDate: String = ""
-    var isFav: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case voteCount = "vote_count"

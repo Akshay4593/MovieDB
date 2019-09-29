@@ -40,7 +40,7 @@ class PopularMoviesVC: BaseUIViewController {
         spinner.startAnimating()
         
         collectionView.register(UINib(nibName: "MovieCVCell", bundle: nil), forCellWithReuseIdentifier: "MovieCVCell")
-       // collectionView.register(MovieLoadingFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "MovieLoadingFooter")
+        collectionView.register(MovieLoadingFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "MovieLoadingFooter")
         
         flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout ?? UICollectionViewFlowLayout()
         
@@ -126,7 +126,7 @@ extension PopularMoviesVC: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if showCVLoadingFooter {
-           // let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "MovieLoadingFooter", for: indexPath) as! MovieLoadingFooterView
+            let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "MovieLoadingFooter", for: indexPath) as! MovieLoadingFooterView
             return UICollectionReusableView()
         }
         return UICollectionReusableView()
@@ -154,7 +154,7 @@ extension PopularMoviesVC: PopularMoviesVCProtocol {
             showLoadingView(msg: message)
         } else {
             showCVLoadingFooter = true
-            // collectionView.reloadSections(IndexSet(integer: 0))
+            //collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
     

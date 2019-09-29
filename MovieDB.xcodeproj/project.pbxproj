@@ -46,6 +46,7 @@
 		7876E6B623408D220056A825 /* EmptyErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6B523408D220056A825 /* EmptyErrorType.swift */; };
 		7876E6B823408D810056A825 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6B723408D810056A825 /* UIViewController+Ext.swift */; };
 		7876E6BA23408DB60056A825 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6B923408DB60056A825 /* UIButton+Ext.swift */; };
+		7876E6BE234098EA0056A825 /* MovieLoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6BD234098EA0056A825 /* MovieLoadingFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		7876E6B523408D220056A825 /* EmptyErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyErrorType.swift; sourceTree = "<group>"; };
 		7876E6B723408D810056A825 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		7876E6B923408DB60056A825 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		7876E6BD234098EA0056A825 /* MovieLoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoadingFooterView.swift; sourceTree = "<group>"; };
 		DB3C9EEAFED8EC302425A66B /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 		780F3C1F233FF59900C4F5FE /* Popular */ = {
 			isa = PBXGroup;
 			children = (
+				7876E6BC234098C90056A825 /* FooterView */,
 				7876E69E23407FC80056A825 /* CVCell */,
 				780F3C20233FF76B00C4F5FE /* Popular.storyboard */,
 				780F3C22233FF7F200C4F5FE /* PopularMoviesVC.swift */,
@@ -272,6 +275,14 @@
 				7876E6B523408D220056A825 /* EmptyErrorType.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		7876E6BC234098C90056A825 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				7876E6BD234098EA0056A825 /* MovieLoadingFooterView.swift */,
+			);
+			path = FooterView;
 			sourceTree = "<group>";
 		};
 		B543DEAB6C0083A526252A94 /* Pods */ = {
@@ -422,6 +433,7 @@
 				780F3C1D233FF1C100C4F5FE /* Constant.swift in Sources */,
 				7876E6A8234083690056A825 /* UINavigationBar+Ext.swift in Sources */,
 				780F3C23233FF7F200C4F5FE /* PopularMoviesVC.swift in Sources */,
+				7876E6BE234098EA0056A825 /* MovieLoadingFooterView.swift in Sources */,
 				780F3C27233FF89400C4F5FE /* PopularMoviesPresenter.swift in Sources */,
 				780F3C31233FFC5A00C4F5FE /* APIRequest.swift in Sources */,
 				780F3C37234076D400C4F5FE /* MovieRoute.swift in Sources */,
