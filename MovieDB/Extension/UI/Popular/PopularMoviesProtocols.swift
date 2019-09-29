@@ -26,6 +26,8 @@ protocol PopularMoviesPresenterProtocol : BasePresenter {
     var wireFrame: PopularMoviesWireFrameProtocol? { get set }
     
     func retryLoadPopularMovies()
+    func sortByPopularity()
+    func sortByRatings()
     func willDisplayCell(at indexPath: IndexPath)
     func didSeletMovie(at indexPath: IndexPath)
 

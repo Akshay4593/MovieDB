@@ -56,6 +56,18 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
         wireFrame?.pushMovieDetailVC(view: view!, movie: movie)
     }
     
+    func sortByPopularity() {
+        
+        
+    }
+    
+    func sortByRatings() {
+        var movieData = moviesViewModel.data
+        movieData.sort { $0.voteAverage > $1.voteAverage }
+        view?.showPopularMovies(viewModel: moviesViewModel)
+
+    }
+    
 
     
 }

@@ -53,6 +53,10 @@ class PopularMoviesVC: BaseUIViewController {
         let itemHeight: CGFloat = itemWidth * (3/2)
         flowLayout.itemSize = CGSize(width: itemWidth, height: itemHeight)
         
+        let settingsBtn = UIBarButtonItem(image: UIImage(named: "ic_settings"), style: .plain, target: self, action: #selector(settingsBtnTapped))
+        
+        navigationItem.rightBarButtonItem = settingsBtn
+        
         
         // Set SearchController
     
@@ -79,6 +83,31 @@ class PopularMoviesVC: BaseUIViewController {
         }
         definesPresentationContext = true
     }
+    
+    @objc private func settingsBtnTapped() {
+        showSortByActionbSheet()
+    }
+    
+    private func showSortByActionbSheet() {
+        let alert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
+        
+        let popularAction = UIAlertAction(title: "Most popular", style: .default) { (action) in
+            self.presenter?.sortByPopularity()
+        }
+        
+        let highestRatedAction = UIAlertAction(title: "Highest Rated", style: .default) { (action) in
+            self.presenter?.sortByRatings()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        alert.addAction(popularAction)
+        alert.addAction(highestRatedAction)
+        alert.addAction(cancelAction)
+    
+        self.present(alert, animated: true, completion: nil)
+      
+    }
+    
     
     
 }

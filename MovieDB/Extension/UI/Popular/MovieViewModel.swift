@@ -21,5 +21,16 @@ class MovieViewModel: PaginationViewModel<Movie> {
     var moviesCount: Int {
         return data.count
     }
+
+    var sortedArrayByPopularity: [Movie] {
+        var movieData = data
+        movieData.sort { $0.popularity > $1.popularity }
+        return movieData
+    }
     
+    var sortedArrayByRatings: [Movie] {
+        var movieData = data
+        movieData.sort { $0.voteAverage > $1.voteAverage }
+        return movieData
+    }
 }
