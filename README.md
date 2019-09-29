@@ -9,3 +9,25 @@ IOS application written using Swift 4.2 & TMDB API. It uses VIPER architecture.
 ![MovieDetails](https://user-images.githubusercontent.com/50488281/65839539-cfbed600-e32b-11e9-8407-6318aaa3d69e.png)
 ![ErrorHandeling](https://user-images.githubusercontent.com/50488281/65839543-d1889980-e32b-11e9-9c1a-a0bb2a5636e4.png)
 ![SortByOptions](https://user-images.githubusercontent.com/50488281/65839544-d2213000-e32b-11e9-9e25-8a44d3b76a42.png)
+
+
+# Prerequisites
+
+Xcode 10.1 Swift 4.2
+
+# Features
+
+Favourite and watchlist, share (feature)
+Search movies already loaded (feature)
+UI Improvement (network api loading, error view)
+Image caching improvement (disk loading)
+
+# More features to be added
+
+TV series
+
+# Acknowledgments
+
+Hat tip to anyone whose code was used
+Inspiration
+etc
