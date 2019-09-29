@@ -52,6 +52,7 @@
 		7876E6C523409C580056A825 /* MovieSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6C423409C580056A825 /* MovieSearchPresenter.swift */; };
 		7876E6C723409CA50056A825 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6C623409CA50056A825 /* MovieSearchInteractor.swift */; };
 		7876E6C923409CF30056A825 /* MovieSearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E6C823409CF30056A825 /* MovieSearchWireframe.swift */; };
+		7876E6CE2340F7D40056A825 /* MovieDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7876E6CD2340F7D40056A825 /* MovieDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		7876E6C423409C580056A825 /* MovieSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchPresenter.swift; sourceTree = "<group>"; };
 		7876E6C623409CA50056A825 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
 		7876E6C823409CF30056A825 /* MovieSearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchWireframe.swift; sourceTree = "<group>"; };
+		7876E6CD2340F7D40056A825 /* MovieDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetails.storyboard; sourceTree = "<group>"; };
 		DB3C9EEAFED8EC302425A66B /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 		780F3C1E233FF53800C4F5FE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7876E6CB2340F5420056A825 /* MovieDetails */,
 				7876E6BF23409BA50056A825 /* SearchMovie */,
 				780F3C1F233FF59900C4F5FE /* Popular */,
 			);
@@ -308,6 +311,22 @@
 			path = SearchMovie;
 			sourceTree = "<group>";
 		};
+		7876E6CB2340F5420056A825 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7876E6CC2340F7B10056A825 /* View */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		7876E6CC2340F7B10056A825 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7876E6CD2340F7D40056A825 /* MovieDetails.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B543DEAB6C0083A526252A94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				780F3C1A233FED3600C4F5FE /* Montserrat-Regular.ttf in Resources */,
+				7876E6CE2340F7D40056A825 /* MovieDetails.storyboard in Resources */,
 				780F3C17233FED3600C4F5FE /* Montserrat-Light.ttf in Resources */,
 				780F3C08233E2C8800C4F5FE /* LaunchScreen.storyboard in Resources */,
 				780F3C18233FED3600C4F5FE /* Montserrat-Bold.ttf in Resources */,

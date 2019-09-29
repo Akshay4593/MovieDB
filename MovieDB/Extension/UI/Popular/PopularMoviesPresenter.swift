@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
 
@@ -41,6 +42,7 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
     }
     
     private func loadPopularMovies() {
+        view?.showLoading(message: "Loading")
         if moviesViewModel.isLoading {
             return
         }
@@ -61,7 +63,7 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
 extension PopularMoviesPresenter: PopularMoviesOutputInteractorProtocol {
     
     func onPopularMoviesSuccess(response: PopularMoviesResponse) {
-       // view?.hideLoading()
+        view?.hideLoading()
         moviesViewModel.success(objects: response.results)
         if response.page == 1 {
             view?.showPopularMovies(viewModel: moviesViewModel)
@@ -76,9 +78,9 @@ extension PopularMoviesPresenter: PopularMoviesOutputInteractorProtocol {
     }
     
     func onPopularMoviesError(error: APIError) {
-        //view?.hideLoading()
+        view?.hideLoading()
         moviesViewModel.failed()
-       // view?.showErrorView(type: .Custom(title: nil, desc: error.description, image: Image.icEmptyState.image, btnAction: "Retry"))
+        view?.showErrorView(type: .Custom(title: nil, desc: error.description, image: UIImage(), btnAction: "Retry"))
     }
     
 }

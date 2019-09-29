@@ -42,8 +42,11 @@ class MovieCVCell: UICollectionViewCell {
     
     public func configure(movie: Movie) {
         titleLbl.text = movie.title
-        imgView.kf.setImage(with: URL(fileURLWithPath:movie.fullPosterPath))
+        //imgView.kf.setImage(with: URL(fileURLWithPath:movie.fullPosterPath))
         
+        let imgUrl = URL(string: movie.fullPosterPath)
+        imgView.kf.setImage(with: imgUrl)
+    
     }
     
 }

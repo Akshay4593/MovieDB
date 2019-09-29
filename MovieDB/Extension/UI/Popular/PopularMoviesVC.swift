@@ -176,6 +176,8 @@ extension PopularMoviesVC: PopularMoviesVCProtocol {
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: indexPaths)
         }, completion: nil)
+        collectionView.reloadItems(at: indexPaths)
+        
     }
     
     func reloadPopularMovies(at indexPaths: [IndexPath]) {
