@@ -17,10 +17,9 @@ Xcode 10.1 Swift 4.2
 
 # Features
 
-Favourite and watchlist, share (feature)
 Search movies already loaded (feature)
 UI Improvement (network api loading, error view)
-Image caching improvement (disk loading)
+Image caching improvement (Using Kingfisher library)
 
 # More features to be added
 
