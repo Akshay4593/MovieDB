@@ -32,8 +32,10 @@ protocol MovieSearchPresenterProtocol: BasePresenter {
 protocol MovieSearchInputInteractorProtocol: class {
     var presenter: MovieSearchOutputInteractorProtocol? { get set }
     
+     func makeSearchMovieRequest(name: String)
 }
 
 protocol MovieSearchOutputInteractorProtocol: class {
-    
+    func onSearchMoviesSuccess(response: PopularMoviesResponse)
+    func onSearchMoviesError(error: APIError)
 }

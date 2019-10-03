@@ -229,9 +229,9 @@ extension PopularMoviesVC: SNEmptyStateViewDelegate {
 }
 
 extension PopularMoviesVC: MovieSearchResultVCDelegate {
-    
-    func movieSeachVC(tappedMovie index: IndexPath) {
-        presenter?.didSeletMovie(at: index)
+    func movieSeachVC(movie: Movie) {
+        presenter?.didSelectMovieSearch(movie: movie)
     }
+
     
 }

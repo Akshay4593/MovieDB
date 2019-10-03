@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MovieSearchResultVCDelegate: class {
-    func movieSeachVC(tappedMovie index: IndexPath)
+    func movieSeachVC(movie: Movie)
 }
 
 class MovieSearchResultVC: BaseUIViewController, UISearchBarDelegate {
@@ -102,7 +102,26 @@ extension MovieSearchResultVC: MovieSearchVCProtocol {
     }
     
     func showErrorView(type: EmptyErrorType) {
-        showError(type: type)
+        showError(type: type, delegate: self)
+    }
+    
+    func showLoading(message: String) {
+        showLoadingView(msg: message)
+    }
+    
+    
+    func hideLoading() {
+        hideLoadingView()
+    }
+    
+}
+extension MovieSearchResultVC: SNEmptyStateViewDelegate {
+    
+    func retryBtnTapped() {
+        
+        if let movie = searchBar?.text {
+            presenter?.searchMovie(searchText: movie)
+        }
     }
     
 }

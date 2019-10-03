@@ -10,6 +10,7 @@ import Foundation
 
 protocol PopularMoviesWireFrameProtocol: class {
     func pushMovieDetailVC(view: PopularMoviesVCProtocol, movie: Movie)
+
 }
 
 protocol PopularMoviesVCProtocol : BaseView {
@@ -30,6 +31,8 @@ protocol PopularMoviesPresenterProtocol : BasePresenter {
     func sortByRatings()
     func willDisplayCell(at indexPath: IndexPath)
     func didSeletMovie(at indexPath: IndexPath)
+    
+    func didSelectMovieSearch(movie: Movie)
 
 }
 

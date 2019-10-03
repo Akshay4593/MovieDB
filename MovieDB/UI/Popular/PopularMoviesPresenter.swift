@@ -57,6 +57,13 @@ class PopularMoviesPresenter: PopularMoviesPresenterProtocol {
         wireFrame?.pushMovieDetailVC(view: view!, movie: movie)
     }
     
+    func didSelectMovieSearch(movie: Movie) {
+        wireFrame?.pushMovieDetailVC(view: view!, movie: movie)
+
+    }
+    
+
+    
     func sortByPopularity() {
         moviesViewModel.sortedArrayByPopularity()
         view?.showPopularMovies(viewModel: moviesViewModel)
